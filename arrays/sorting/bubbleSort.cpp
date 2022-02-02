@@ -21,6 +21,10 @@ int main(int argc, char const *argv[])
         }
         count++;
     }
+
+    for(int i=0; i<len; i++){
+        cout<<arr[i]<<" ";
+    }
     return 0;
 }
 
