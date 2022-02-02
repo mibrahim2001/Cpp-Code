@@ -38,7 +38,7 @@ bool isSafe(int** arr, int x, int y, int n){
         column++;
     }
 
-    //if all the conditions are checked then return true it means this block is safe 
+    //if all the conditions are checked then return true it means this block is safe to place queen
     return true;
 }
 
