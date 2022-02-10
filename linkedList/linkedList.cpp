@@ -77,6 +77,44 @@ bool searchLinkList(node* head, int key){
 }
 
 
+//the function given above will not work for head so making another function for head
+void deleteAtHead(node* &head){
+    //making a temporary node to del
+    node* nodeToDel = head;
+    //moving head to the next value
+    head = head->next;
+    //deleting the head
+    delete nodeToDel;
+}
+
+
+//a function to delete a node in linked list 
+void deletion(node* &head, int val){
+    //if the list is empty there is nothing to delete
+    if(head == NULL){
+        return;
+    }
+    //if their is only one element in list which is at head of course then 
+    if(head->next == NULL){
+        deleteAtHead(head);
+        return;
+    }
+    node* temp = head;
+    //we will traverse throught the list until we find the node whose next point to the node that we have to del
+    while(temp->next->data != val){
+        temp = temp->next;
+    }
+    //then we store the address of the node we have to del in a temp node
+    node* nodeToDel = temp->next;
+    //now we join the temp node to the node which is next to node we have to delete
+    temp->next = temp->next->next;
+    //finally delete the node
+    delete nodeToDel;
+
+}
+
+
+
 //Driver Function 
 int main(int argc, char const *argv[])
 {
@@ -95,5 +133,12 @@ int main(int argc, char const *argv[])
     //searching in the list
     cout<<searchLinkList(head,6)<<endl;
 
+    //deletion in the list 
+    deletion(head,2);
+    displayLinkList(head);
+
+    //deleting at head
+    deleteAtHead(head);
+    displayLinkList(head);
     return 0;
 }
