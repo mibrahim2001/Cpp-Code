@@ -3,7 +3,7 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-    /* //append function 
+    //append function 
     string str;
     cin>>str;
     string str1;
@@ -11,7 +11,7 @@ int main(int argc, char const *argv[])
 
     str.append(str1);
 
-    cout<<str; */
+    cout<<str; 
 
     //compare function(used to compare two strings)
     string str1 = "abc";
@@ -22,7 +22,7 @@ int main(int argc, char const *argv[])
         
     }
 
-    //empty funciton(used to find if our string is empty)
+    //empty function(used to find if our string is empty)
     if(!str1.empty()){
         cout<<"String is not empty!"<<endl;
     }

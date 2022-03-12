@@ -7,11 +7,11 @@ int main(){
     int j = 10;
     int k;
             
-        //4     4       11      5       11
+        
     k = --i  +  i++  +  j--  -  i--  -  ++j;
 
-    cout<<"int i = "<<i<<endl; //4
-    cout<<"int j = "<<j<<endl; //10
+    cout<<"int i = "<<i<<endl; 
+    cout<<"int j = "<<j<<endl; 
     cout<<"int k = "<<k<<endl; 
 
 
