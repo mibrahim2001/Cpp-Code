@@ -82,10 +82,21 @@ void mergeSort(int arr[], int l, int r){
 int main(int argc, char const *argv[])
 {
     int arr[8] = {9,1,2,4,3,5,7,6};
-    mergeSort(arr,0,7);
+    int len = sizeof(arr)/sizeof(arr[0]);
 
-    for(int i=0; i<8; i++){
+    cout<<"Unsorted Array: "<<endl;
+    for(int i=0; i<len; i++){
         cout<<arr[i]<<" ";
     }
+    cout<<endl;
+
+    mergeSort(arr,0,7);
+
+    cout<<"Sorted Array: "<<endl;
+    for(int i=0; i<len; i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+
     return 0;
 }
