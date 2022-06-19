@@ -9,6 +9,11 @@ int main(int argc, char const *argv[])
 {
     int arr[5] = {12,45,101,34,1};
     int len = sizeof(arr)/sizeof(arr[0]);
+    cout<<"Unsorted Array: "<<endl;
+    for(int i=0; i<len; i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
 
     int count = 1; 
     while(count<len){
@@ -22,9 +27,12 @@ int main(int argc, char const *argv[])
         count++;
     }
 
+    cout<<"Sorted Array: "<<endl;
     for(int i=0; i<len; i++){
         cout<<arr[i]<<" ";
     }
+    cout<<endl;
+    
     return 0;
 }
 

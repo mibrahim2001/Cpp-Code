@@ -64,10 +64,20 @@ void quickSort(int arr[], int l, int r){
 int main(int argc, char const *argv[])
 {
     int arr[] = {4,1,7,3,1,5,9};
-    quickSort(arr,0,6);
+    int len = sizeof(arr)/sizeof(arr[0]);
 
-    for(int i=0; i<7; i++){
+    cout<<"Unsorted Array: "<<endl;
+    for(int i=0; i<len; i++){
         cout<<arr[i]<<" ";
     }
+    cout<<endl;
+    quickSort(arr,0,len-1);
+
+    cout<<"Sorted Array: "<<endl;
+    for(int i=0; i<len; i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+
     return 0;
 }
